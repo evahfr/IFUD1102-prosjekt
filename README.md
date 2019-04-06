@@ -1,2 +1,2 @@
 # IFUD1102-prosjekt
-Prosjektoppgave i emnet IFUD1102
+Prosjektoppgave i emnet IFUD1102.
