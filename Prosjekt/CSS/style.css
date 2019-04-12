@@ -252,5 +252,18 @@ color: white;
     padding: 50px 10px 10px 10px;
  }
 
- 
+ .user-review img {
+     padding: 10px;
+ }
+
+ .user-review p::before {
+     content: '\201d';
+     display: block;
+     position: absolute;
+     font-size: 80px;
+     color: #6495ed;
+     font-family: sans-serif;
+     left: 44%;
+     top: 20%;
+ }
 
