@@ -15,6 +15,12 @@ text-align: center;
 color: white;
 }
 
+#header-lofoten {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/lofoten.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+}
+
 .navbar img {
 width: 100px;
 }
@@ -264,5 +270,31 @@ color: white;
      font-family: sans-serif;
      left: 44%;
      top: 20%;
+ }
+
+ /* Navigation */
+ #navbarText .nav-link {
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+ }
+
+ /* Travel information page */
+
+ .main-content {
+    max-width: 1180px;
+    margin: auto;
+    margin-bottom: 80px;
+ }
+
+ .main-content .row {
+    padding-left: 80px;
+    padding-right: 80px;
+ }
+
+ /* Map */
+
+ #map-lofoten {
+     height: 400px;
+     width: 100%;
  }
 
