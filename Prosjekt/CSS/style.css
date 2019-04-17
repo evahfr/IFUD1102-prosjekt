@@ -15,9 +15,8 @@ text-align: center;
 color: white;
 }
 
-.header img {
+.navbar img {
 width: 100px;
-float: left;
 }
 
 .login-btn {
