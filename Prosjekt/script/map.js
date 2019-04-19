@@ -251,7 +251,19 @@ var lofotenMapData = [{
   }];
 
 document.body.onload = function() {
-    var map = L.map('map-lofoten').setView([68.175040, 14.084761], 8);
+    var map = L.map('map-lofoten', {
+        scrollWheelZoom: false
+    }).setView([68.175040, 14.084761], 8);
+
+    map.on('click', function() {
+        if (map.scrollWheelZoom.enabled()) {
+          map.scrollWheelZoom.disable();
+          }
+          else {
+          map.scrollWheelZoom.enable();
+          }
+        });
+
     L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}', {
         attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
         }).addTo(map);
