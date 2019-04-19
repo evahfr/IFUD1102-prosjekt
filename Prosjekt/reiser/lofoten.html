@@ -20,6 +20,9 @@
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
     integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
     crossorigin=""></script>
+
+    <!-- Kart script -->
+
 </head>
 <body>
     <!-- Navigasjon -->
@@ -69,7 +72,12 @@
     <section class="main-content">
         <div class="row">
             <div class="col-md-6">
-                <h3>Lorem ipsum</h3>
+                <h3>Opplev fantastiske Lofoten</h3>
+                <div class="feature-details">
+                    <span><i class="fa fa-map-marker"></i>Lofoten</span>
+                    <span><i class="fa fa-sun-o"></i>4 Dager</span>
+                    <span><i class="fa fa-moon-o"></i>3 Netter</span>
+                </div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt luctus posuere. 
                     Quisque molestie interdum libero eget tempus. Aliquam vehicula lorem at blandit dignissim. 
@@ -86,18 +94,12 @@
                 </p>
             </div>
 
+            <script type="text/JavaScript" src="../script/map.js"></script>
             <div class="col-md-6">
                 <div id="map-lofoten"></div>
             </div>
         </div>
-
     </section>
-    <script>
-        var map = L.map('map-lofoten').setView([68.275040, 14.184761], 8);
-        L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}', {
-            attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
-        }).addTo(map);
-    </script>
 </body>
 
 
