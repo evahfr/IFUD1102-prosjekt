@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script src="../script/skjema.js"></script>
+
 </head>
 <body>
     <!-- Navigasjon -->
@@ -65,9 +67,157 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <script src="../script/queryStringReader.js"></script>
+
+    <!-- Skjema -->
+
+    <div class="row">
+        <form id="reiseform" class="skjema" action="http://www.iie.ntnu.no/fag/webutvikling1/prosjekt/behandle.php" method="post">
+
+        <h1>Bestill din reise</h1>
+
+        *<b>Fornavn:</b>
+        <br>
+        <input type="text" name="Fornavn" size="20" required>
+        <br>
+        <br>
+        *<b>Etternavn:</b>
+        <br>
+        <input type="text" name="Etternavn" size="20" required>
+        <br>
+        <br>
+        <br>
+        *<b>Antall reisende:</b><br>
+           Voksne:
+        <select id="antall_voksne" name="Antall voksne som reiser"
+        onchange="calculateTotal()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        </select>
+           Barn (1 til 16 &aring;r):
+           <select id="antall_barn" name="Antall barn som reiser"
+           onchange="calculateTotal()">
+         <option>0</option>
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+         <option>6</option>
+        </select>
+        <br>
+        <br>
+           Student:
+        <select id="antall_student" name="Antall studenter som reiser"
+        onchange="calculateTotal()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        </select>
+           Honn&oslash;r:
+        <select id="antall_honnor" name="Antall honn&oslash;rer som reiser"
+        onchange="calculateTotal()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        </select>
+        <br>
+        <br>
+        <br>
+           *<b>Startdato:</b> (mm/dd/yyyy)<br>
+           <input id="start" type="text" name="Start dato" size="10" required onchange="calculateTotal()">
+           <br>
+           <br>
+           *<b>Sluttdato:</b> (mm/dd/yyyy)<br>
+           <input id="slutt" type="text" name="Slutt dato" size="10" required onchange="calculateTotal()">
+        <br>
+        <div id="antalldager"></div>
+        <!--Gjemt input, denne faktoren vil bli brukt til utregning i JS-->
+        <input type="hidden" name="Antall reisedager" id="antall_dager"
+        style="width: 100px;" onchange="calculateTotal()">
+        <br>
+        <br>
+        <b>Cruisetype:</b>
+        <select id="cruisetype" name="Cruisetype">
+          <option>Familie</option>
+          <option>Singel</option>
+          <option>Senior</option>
+        </select>
+        <br>
+        <br>
+        <b>Type Lugar:</b>
+        <select id="type_lugar" name="Type lugar"
+        onchange="calculateTotal()">
+        <option selected>Standard</option>
+        <option>Luxury</option>
+        <option>Superior</option>
+        </select>
+        <br>
+        <br>
+        <b>
+        Antall lugarer er normalt 1-4 personer pr lugar.
+        <br>
+        Ved spesielle behov eller reise med sm&aring; barn,
+        <br>
+        noter dette i kommentarfeltet under.</b>
+        <br>
+        <br>
+        <br>
+          *<b>E-mail:</b>
+        <input type="email" name="epost" size="40" required>
+        <br>
+        <br>
+        <b>Telefon:</b>
+        <input type="tel" name="Telefon" size="15" minlength="8" maxlength="8"> (Valgfritt)
+        <br>
+        <br>
+        <br>
+        <b>Har du SAS Eurobonus eller Choice Club?</b>
+        <br>
+        <input type="radio" name="Bonus" value="Nei" id="nei" checked onclick="calculateTotal()"><label for="nei">Ingen av delene</label>
+        <br>
+        <input type="radio" name="Bonus" value="SAS Bonus" id="sas_bonus" onclick="calculateTotal()"><label for="sas_bonus">SAS Eurobonus</label>
+        <br>
+        <input type="radio" name="Bonus" value="Choice Club" id="cc_bonus" onclick="calculateTotal()"><label for="cc_bonus">Choice Club</label>
+        <br>
+          Skriv inn ditt kundenummer:
+          <input name="Kundenummer" type="text" id="kundenummer" size="15" minlength="7" maxlength="7" required>
+          <br>
+          <br>
+          <b>Totalpris:</b>
+          <br>
+          <input type="text" name="Totalpris i kr" id="totalpris" style="width: 100px;" onchange="calculateTotal()">
+          <br>
+          <br>
+          <b>Kommentarer eller andre beskjeder i bestillingen:</b>
+          <br>
+          <input type="text" name="Notat" id="notat" style="width: 300px; height: 50px; ">
+          <br>
+          <br>
+          <input type="submit" name="Submit" id="submit" value="Neste/til betaling">
+          <input type="reset" name="reset" value="T&oslash;m alle felt">
+        </form>
+    </div>
+
+    <div class="row">
+        <b>*M&aring; fylles ut*</b>
+    </div>
+</div>
+
 
     <!-- Footer -->
     <section class="footer">
