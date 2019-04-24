@@ -4,6 +4,7 @@
     margin: 0;
 }
 
+
 .header {
 height: 950px;
 background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../bilder/banner3.jpg);
@@ -29,38 +30,18 @@ width: 100px;
 .header h1 {
 padding-top: 260px;
 padding-bottom: 0;
-font-size: 55px;
+font-size: 8em;
+}
+.header p {
+    padding-top: 45px;
+    font-size: 3em;
 }
 
 .header p {
 margin: 18px 0;
 }
 
-.input-group {
-width: 90%;
-max-width: 500px;
-border-radius: 30px;
-background: #fff;
-margin: auto;
-padding: 2px;
-}
 
-.form-control {
-border: 0 !important;
-border-radius: 30px !important;
-margin: 2px;
-box-shadow: none !important;
-}
-
-.input-group-text {
-width: 100px;
-background-image: linear-gradient(#00ff7e,#ff5722);
-border: 0 !important;
-color: #fff !important;
-border-radius: 30px !important;
-padding: 25px;
-box-shadow: none;
-}
 
 /*features*/
 
@@ -192,7 +173,7 @@ transform: scale(1.1);
 
 .gallery-box2 img {
     width: 100%;
-    height: 100%;
+    height: 161px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
@@ -209,7 +190,7 @@ transform: scale(1.1);
     font-weight: 600;
     font-size: 18px;
     position: absolute;
-    top: 40%;
+    top: 41%;
     left: 35%;
     
  }
@@ -361,4 +342,8 @@ color: white;
 
 .footer .copyright {
     text-align: center;
+}
+
+.logoText {
+    padding-left: 18px;
 }
