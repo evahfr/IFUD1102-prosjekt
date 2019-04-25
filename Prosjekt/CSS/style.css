@@ -271,6 +271,7 @@ color: white;
  .main-content .row {
     padding-left: 80px;
     padding-right: 80px;
+    width: 100%;
  }
 
  /* Text box */
