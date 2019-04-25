@@ -22,6 +22,18 @@ color: white;
     margin-bottom: 80px;
 }
 
+#header-henningsvaer {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/henningsvær_banner.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+}
+
+#header-bodoe {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/Bodo_banner.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+}
+
 .navbar img {
 width: 100px;
 }
