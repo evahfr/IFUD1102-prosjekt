@@ -347,3 +347,32 @@ color: white;
 .logoText {
     padding-left: 18px;
 }
+
+/*---------------------Galleri---------------------*/
+
+.lofoten-bilder {
+    display: row;
+    padding: 5px;
+}
+.lofoten-bilder h4 {
+    text-align: center;
+    padding: 10px;
+}
+
+.henningsvær-bilder {
+    display: row;
+    padding: 5px;
+}
+.henningsvær-bilder h4 {
+    text-align: center;
+    padding: 10px;
+}
+
+.bodø-bilder {
+    display: row;
+    padding: 5px;
+}
+.bodø-bilder h4 {
+    text-align: center;
+    padding: 10px;
+}
