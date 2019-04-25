@@ -353,6 +353,11 @@ color: white;
 .lofoten-bilder {
     display: row;
     padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.lofoten-bilder:hover {
+    filter: grayscale(0);
 }
 .lofoten-bilder h4 {
     text-align: center;
@@ -362,6 +367,11 @@ color: white;
 .henningsvær-bilder {
     display: row;
     padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.henningsvær-bilder:hover {
+    filter: grayscale(0);
 }
 .henningsvær-bilder h4 {
     text-align: center;
@@ -371,6 +381,11 @@ color: white;
 .bodø-bilder {
     display: row;
     padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.bodø-bilder:hover {
+    filter: grayscale(0);
 }
 .bodø-bilder h4 {
     text-align: center;
