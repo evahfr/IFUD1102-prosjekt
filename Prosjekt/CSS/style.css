@@ -375,6 +375,8 @@ color: white;
 .lofoten-bilder h4 {
     text-align: center;
     padding: 10px;
+    font-weight: bolder;
+    font-variant: small-caps;
 }
 
 .henningsvær-bilder {
@@ -389,6 +391,8 @@ color: white;
 .henningsvær-bilder h4 {
     text-align: center;
     padding: 10px;
+    font-weight: bolder;
+    font-variant: small-caps;
 }
 
 .bodø-bilder {
@@ -403,4 +407,34 @@ color: white;
 .bodø-bilder h4 {
     text-align: center;
     padding: 10px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.lofoten-linje {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    width: 60%;
+    text-align: center;
+    margin: 0 1px 5px 18%;
+}
+.henningsvær-linje {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    width: 60%;
+    text-align: center;
+    margin: 0 1px 5px 18%;
+}
+.bodø-linje {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    width: 60%;
+    text-align: center;
+    margin: 0 1px 5px 18%;
 }
