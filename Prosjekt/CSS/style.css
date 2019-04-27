@@ -20,18 +20,32 @@ color: white;
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/lofoten.jpg);
     height: 600px;
     margin-bottom: 80px;
+    overflow: hidden;
 }
 
 #header-henningsvaer {
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/henningsvær_banner.jpg);
     height: 600px;
     margin-bottom: 80px;
+    overflow: hidden;
 }
 
 #header-bodoe {
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/Bodo_banner.jpg);
     height: 600px;
     margin-bottom: 80px;
+    overflow: hidden;
+}
+
+#header-msLofoten {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/skip/cruiseskip2.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+#header-msLofoten h1 {
+    padding-top: 80px;
 }
 
 .navbar img {
@@ -71,7 +85,6 @@ width: 100%;
 }
 
 .Pris {
-    width: 50px;
     height: 50px;
     background: #ff5722;
     color: #fff;
@@ -261,7 +274,7 @@ color: white;
      padding-right: 1.5rem;
  }
 
- /* Travel information page */
+ /* Information page */
  .main-content {
     max-width: 1180px;
     margin: auto;
@@ -271,10 +284,39 @@ color: white;
  .main-content .row {
     padding-left: 80px;
     padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
     width: 100%;
  }
 
- /* Text box */
+ .main-content img {
+    margin: auto;
+    width: 100%;
+    max-width: 850px;
+ }
+
+ /* Information list */
+ .info-list {
+    font-style: italic;  
+ }
+
+ .info-list ul {
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #265788;
+    text-align: center;
+    list-style: none;
+ }
+
+ .info-list li {
+    padding: 15px;
+    border-left: 1px solid black;
+ }
+
+ /* Text box with image*/
  .text-box {
     border-top: solid 1px black;
     border-bottom: solid 1px black;
