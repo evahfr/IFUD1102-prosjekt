@@ -11,18 +11,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- Leaflet kart -->
-    <!-- Ekternt stilark -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-    crossorigin=""/>
-    <!-- Leaflet JavaScript bibliotek -->
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-    crossorigin=""></script>
-
-    <!-- Kart script -->
-
 </head>
 <body>
     <!-- Navigasjon -->
@@ -38,18 +26,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../index.html">Hjem</a>
                 </li>
-                <li class="nav-item dropdown active">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuDestinations" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reiser</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuDestinations">
                         <a class="dropdown-item" href="lofoten.html">Lofoten</a>
-                        <a class="dropdown-item active" href="henningsvaer.html">Henningsvær <span class="sr-only">(aktiv)</span></a>
+                        <a class="dropdown-item" href="henningsvaer.html">Henningsvær</a>
                         <a class="dropdown-item" href="bodoe.html">Bodø</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown  active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuShips" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Skip</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuShips">
-                        <a class="dropdown-item" href="../skip/msLofoten.html">MS Lofoten</a>
+                        <a class="dropdown-item  active" href="../skip/msLofoten.html">MS Lofoten <span class="sr-only">(aktiv)</span></a>
                         <a class="dropdown-item" href="../skip/msBodoe.html">MS Bodø</a>
                     </div>
                 </li>
@@ -65,67 +53,12 @@
 
     <!-- Sideinnhold -->
 
-    <section class="header" id="header-henningsvaer">
-        <h1>Henningsvær</h1>
-        <h2>-Opplev god mat, hvalsafari og kajakktur</h2>
+    <section class="header">
+        <h1>MS Lofoten</h1>
     </section>
 
     <section class="main-content">
-        <div class="row">
-            <div class="col-lg-6">
-                <h3>Opplev fantastiske Henningsvær</h3>
-                <div class="feature-details">
-                    <span><i class="fa fa-map-marker"></i>Henningsvær</span>
-                    <span><i class="fa fa-sun-o"></i>2 Dager</span>
-                    <span><i class="fa fa-moon-o"></i>1 Netter</span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt luctus posuere. 
-                    Quisque molestie interdum libero eget tempus. Aliquam vehicula lorem at blandit dignissim. 
-                    Pellentesque quis lorem pretium, pharetra mi at, gravida dolor. Nullam finibus accumsan 
-                    urna vel vestibulum. Donec aliquam molestie viverra. Etiam elit felis, ultricies ut 
-                    feugiat a, bibendum in est. Quisque finibus orci eget dapibus molestie. Proin sed tempor arcu.
-                </p>
-                <p>
-                    Donec dui eros, bibendum in quam vitae, viverra facilisis justo. In convallis mauris 
-                    at orci porttitor, ac ultrices quam pellentesque. Sed viverra ex tellus, a viverra odio 
-                    interdum non. Phasellus egestas rhoncus venenatis. Phasellus quam nisi, lacinia sit amet 
-                    posuere vitae, egestas nec justo. Nam at ante sed ipsum rutrum euismod. Mauris massa risus,
-                    egestas nec urna in, faucibus tempor arcu. Nunc eget magna a magna dignissim lobortis. 
-                </p>
-            </div>
-
-            <script type="text/JavaScript" src="../script/map.js"></script>
-            <div class="col-lg-6">
-                <div class="map" id="map-henningsvaer"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="text-box">
-                <div class="text-box-content">
-                <img src="../bilder/cruiseskip.jpg"/>
-                    <h4>Velkommen ombord på MS Lofoten</h4>
-                    <p> 
-                        Skipet som du vil bo på har en bestettning på XX med plass til XXX antall gjester. Her vil
-                        du bo på nye og lekre lugrarer med mulighet til å velge mellom innvendig eller utvendig lugar. Det 
-                        serveres fersk skjømat hver dag i tillegg til en variert egetarmeny og barnemeny for de minste.
-                    </p>
-                    <p>
-                        <a class="more-link" href="../skip/msLofoten.html">Les mer <i class="fa fa-arrow-right"></i></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <h3>Finn din reise</h3>
-            
-        </div>
     </section>
 
     <!-- Footer -->
