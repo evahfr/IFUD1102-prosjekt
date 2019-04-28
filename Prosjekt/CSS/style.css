@@ -274,6 +274,29 @@ color: white;
      padding-right: 1.5rem;
  }
 
+ /* Order button/link */
+.orderButton {
+    background-color: #265788;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    height: 70px;
+    width: 450px;
+    border-radius: 30px;
+    line-height: 66px;
+    margin: auto;
+}
+
+.orderButton:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.orderButton:hover > i{
+    transform: translateX(8px);
+ }
+
  /* Information page */
  .main-content {
     max-width: 1180px;

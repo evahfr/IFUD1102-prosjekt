@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- For jQuery UI Datepicker -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
     <script src="../script/skjema.js"></script>
+    <script type="text/javascript" src="../script/dateSelector.js"></script>
+    <script src="../script/queryStringReader.js"></script>
 
 </head>
 <body>
@@ -59,15 +65,10 @@
         <div class="row">
             <div class="text-box">
                 <div class="text-box-content">
-                    <h4>Du bestiller nå <span id="cruiseDestination"></span> Cruise:</h4>
-                    &nbsp;
-                    <p>Fra <span id="fromDate"></span> til <span id="toDate"></span></p>
-                    <p>Prisklasse <span id="price"></span></p>
+                    <h4 id="cruiseDestination"></h4>
                 </div>
             </div>
         </div>
-
-    <script src="../script/queryStringReader.js"></script>
 
     <!-- Skjema -->
 
@@ -137,27 +138,17 @@
         <br>
         <br>
         <br>
-           *<b>Startdato:</b> (mm/dd/yyyy)<br>
-           <input id="start" type="text" name="Start dato" size="10" required onchange="calculateTotal()">
-           <br>
-           <br>
-           *<b>Sluttdato:</b> (mm/dd/yyyy)<br>
-           <input id="slutt" type="text" name="Slutt dato" size="10" required onchange="calculateTotal()">
-        <br>
-        <div id="antalldager"></div>
-        <!--Gjemt input, denne faktoren vil bli brukt til utregning i JS-->
-        <input type="hidden" name="Antall reisedager" id="antall_dager"
-        style="width: 100px;" onchange="calculateTotal()">
-        <br>
-        <br>
-        <b>Destinasjon:</b>
-        <select id="cruisetype" name="Cruisetype">
-          <option>Lofoten</option>
-          <option>Henningsvær</option>
-          <option>Bodø</option>
+
+        *<b>Destinasjon:</b>
+        <select id="cruisetype" name="Cruisetype" placeholder="Velg destinasjon">
+          <option value="" disabled selected>Velg destinasjon</option>
+          <option value="1">Lofoten</option>
+          <option value="2">Henningsvær</option>
+          <option value="3">Bodø</option>
         </select>
         <br>
         <br>
+
         <b>Type Lugar:</b>
         <select id="type_lugar" name="Type lugar"
         onchange="calculateTotal()">
@@ -174,6 +165,23 @@
         <br>
         noter dette i kommentarfeltet under.</b>
         <br>
+        <br>
+        <br>
+            <b>Velg dato</b><span> (destinasjon må være valgt)</span><b>:</b>
+            <br>
+            <input type="text" class="datepicker" id="datepicker-lofoten" required onchange="calculateTotal()" placeholder="dd/mm/yyyy">
+            <br>
+            <br>
+            <b>Tilgjengelig reise basert på valgt dato:</b>
+            <br>
+           <span>Fra </span>
+           <input id="start" type="text" name="Start dato" size="10" required onchange="calculateTotal()" placeholder="dd/mm/yyyy" readonly>
+           <span> til </span>
+           <input id="slutt" type="text" name="Slutt dato" size="10" required onchange="calculateTotal()" placeholder="dd/mm/yyyy" readonly>
+        <br>
+        <div id="antalldager"></div>
+        <!--Gjemt input, denne faktoren vil bli brukt til utregning i JS-->
+        <input type="hidden" name="Antall reisedager" id="antall_dager" style="width: 100px;" onchange="calculateTotal()">
         <br>
         <br>
           *<b>E-mail:</b>

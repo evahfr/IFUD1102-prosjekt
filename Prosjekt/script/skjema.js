@@ -1,69 +1,3 @@
-// function Skjema(){
-// 	window.location.assign("skjema.html")
-// }
-
-$(document).ready(function() {
-$('#antalldager').html('velg reisedager');
-    $('#start').datepicker({
-    //Setter grense for Startdato, første valg er dagens dato. maksdato er 2 år fra d.d
-    mindate:0,
-    maxdate: "+2y",
-    //enklere å navigere i kalenderen
-    changeMonth: true,
-    changeYear: true,
-    onClose: function(selectedDate) {
-      var minday = $ ("#start").datepicker('getDate');
-      var maxday = $ ("#start").datepicker('getDate');
-      var day = $ ("#start").datepicker('getDate');
-      //Setter minstedato for sluttdato en dag over valgt startdato. maxdato for slutt er tretten dager etter valgt dato for start
-      minday.setDate(day.getDate()+1);
-      $("#slutt").datepicker("option", "minDate", minday);
-      maxday.setDate(day.getDate()+14);
-      $("#slutt").datepicker("option", "maxDate", maxday);
-    }
-});
-$('#slutt').datepicker({
-  //setter grense for sluttdato. minimumsdato for slutt er 14 dager etter d.d. Maxdato for slutt er minimumsdato + 2 år frem i tid
-  minDate: +14,
-  maxDate: "+2y"+14,
-  changeMonth: true,
-  changeYear: true,
-  onClose: function(selectedDate) {
-    var minnday = $("#slutt").datepicker('getDate');
-    var maksday = $("#slutt").datepicker('getDate');
-    var dag = $("#slutt").datepicker('getDate');
-    //Setter maksdato for start en dag under valgt dato til sluttdato, samt minstedato for start tretten dager under valgt dato for slutt, i tilfelle kunden vil sette sluttdato først.
-    minnday.setDate(dag.getDate()-14);
-    $('#start').datepicker("option", "minDate", minnday);
-    maxday.setDate(dag.getDate()-1);
-    $('#start').datepicker("option", "maxDate", maksday);
-  }
-});
-
-$('#start').on('change', function(){
-  //ved endring av start, skjer følgende:
-  var dager = (daydiff(tolkDato($("#start").val()), tolkDato($("#slutt").val())));
-  //endrer tekst under datovelger til tekst som forteller hvor mange dager kunden har valgt
-$('#antalldager').html('Du har valgt antall dager: '+dager);
-//Dette setter inn ant dager i den skjulte inputen. Endrer man dato etter opprinnelig valg, vil tallet endres
-$('#antall_dager').val(dager);
-})
-
-$('#slutt').on('change',function(){
-  var dager =(daydiff(tolkDato($("#start").val()), tolkDato($("#slutt").val())));
-  $('#antalldager').html('Du har valgt antall dager: '+dager);
-  $('#antall_dager').val(dager);
-})
-
-function tolkDato(str) {
-  var dt = str.split('/')
-  return new Date(dt[2], dt[0]-1 ,dt[1]);
-}
-
-function daydiff(first, second) {
-  return (second-first)/(1000*60*60*24);
-}
-});
 
 //Dette er for å slå av og på kundenummerfeltet. Avhenger om kunden har bonuskort eller ikke
 window.onload = function() {
@@ -89,7 +23,7 @@ function disablefield()
   }
 }
 
-var theForm = document.forms[reiseform];
+var theForm = document.forms["reiseform"];
 
 
 
@@ -239,6 +173,9 @@ function calculateTotal()
     var tmp2 = getAntallBarnPris();
     var tmp3 = getAntallStudentPris();
     var tmp4 = getAntallHonnorPris();
+    var tmp5 = getbonusrabatten();
+    var tmp6 = getTypeLugarPris();
+    var tmp5 = document.getElementById("antall_dager").value;
 
     var turpris = (getAntallVoksnePris() + getAntallBarnPris() + getAntallStudentPris() + getAntallHonnorPris())*getbonusrabatten()*getTypeLugarPris()*(document.getElementById("antall_dager").value * 0.5 + 0.5);
     //viser resultatet
