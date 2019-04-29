@@ -97,9 +97,9 @@ style="width: 100px;" onchange="calculateTotal()">
 <br>
 <b>Cruisetype:</b>
 <select id="cruisetype" name="Cruisetype">
-  <option>Familie</option>
-  <option>Singel</option>
-  <option>Senior</option>
+  <option>Lofoten</option>
+  <option>Henningsvær</option>
+  <option>Bodø</option>
 </select>
 <br>
 <br>
