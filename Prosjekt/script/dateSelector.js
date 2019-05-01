@@ -1,4 +1,4 @@
-function DisableInvalidDates(date) {
+function disableInvalidDates(date) {
     var cruiseType = $("#cruisetype")[0].value;
 
     // Det tilbys kun cruise i månedene april t.o.m. september
@@ -18,6 +18,8 @@ function DisableInvalidDates(date) {
     var day = date.getDay();
     var month = date.getMonth();
 
+    // Deaktiverer dager hvor det ikke tilbys cruise for reisen
+    // og måneder som er utenfo reisesesongen
     if (invalidDays.includes(day) || invalidMonths.includes(month)) {
         return [false]; 
    
@@ -47,8 +49,11 @@ function setDateRange(date) {
     var startDate = new Date(date.setDate(diffStart));
     var endDate = new Date(date.setDate(diffEnd));
 
+    // Setter start- og sluttdato i bestillingsskjemaet
     $("#start").val(startDate.getDate().toString().padStart(2, "0") + "/" + (startDate.getMonth() + 1).toString().padStart(2, "0") + "/" + startDate.getFullYear());
     $("#slutt").val(endDate.getDate().toString().padStart(2, "0") + "/" + (endDate.getMonth() + 1).toString().padStart(2, "0") + "/" +  endDate.getFullYear());
+
+    // Setter inn antall dager i skjult felt i bestillingsskjema som brukes til beregning av pris 
     $("#antall_dager").val(validDays.length);
 }
 
@@ -61,7 +66,7 @@ $(function() {
         changeYear: true,
         minDate: "+1w",
         maxDate: "+2yr",
-        beforeShowDay: DisableInvalidDates,
+        beforeShowDay: disableInvalidDates,
         monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec" ],
         dayNamesMin: [ "Sø", "Ma", "Ti", "On", "To", "Fr", "Lø" ]
     });

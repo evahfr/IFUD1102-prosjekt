@@ -169,15 +169,8 @@ function calculateTotal()
     //Her får vi totalprisen ved å hente funksjonene
     //Hver funksjon returnerer et tall
   //document.getElementById("antall_dager").value henter verdien fra den skjulte inputen i skjemaet
-    var tmp1 = getAntallVoksnePris();
-    var tmp2 = getAntallBarnPris();
-    var tmp3 = getAntallStudentPris();
-    var tmp4 = getAntallHonnorPris();
-    var tmp5 = getbonusrabatten();
-    var tmp6 = getTypeLugarPris();
-    var tmp5 = document.getElementById("antall_dager").value;
 
-    var turpris = (getAntallVoksnePris() + getAntallBarnPris() + getAntallStudentPris() + getAntallHonnorPris())*getbonusrabatten()*getTypeLugarPris()*(document.getElementById("antall_dager").value * 0.5 + 0.5);
+    var turpris = (getAntallVoksnePris() + getAntallBarnPris() + getAntallStudentPris() + getAntallHonnorPris())*getbonusrabatten()*getTypeLugarPris()*(document.getElementById("antall_dager").value);
     //viser resultatet
 	$('#totalpris').val(turpris);
 
