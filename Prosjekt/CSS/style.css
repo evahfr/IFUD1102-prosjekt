@@ -508,3 +508,38 @@ color: white;
     text-align: center;
     margin: 0 1px 5px 18%;
 }
+
+/* Responsiv mobil visning */
+
+@media only screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 3em;
+        margin: 10px;
+    }
+
+    .header p {
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    .header h2 {
+        margin: 10px;
+    }
+
+    .footer {
+        padding: 20px 20px 20px;
+    }
+
+    .main-content .row {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text-box {
+        margin: 0;
+    }
+
+    .orderButton {
+        font-size: 18px;
+    }
+}
