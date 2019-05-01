@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
     <script src="../script/skjema.js"></script>
-    <script type="text/javascript" src="../script/dateSelector.js"></script>
+    <script src="../script/dateSelector.js"></script>
     <script src="../script/queryStringReader.js"></script>
 
 </head>
@@ -37,7 +37,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuDestinations" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reiser</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuDestinations">
-                        <a class="dropdown-item" href="../reiser/lofoten.html">Lofoten</span></a>
+                        <a class="dropdown-item" href="../reiser/lofoten.html">Lofoten</a>
                         <a class="dropdown-item" href="../reiser/henningsvaer.html">Henningsvær</a>
                         <a class="dropdown-item" href="../reiser/bodoe.html">Bodø</a>
                     </div>
@@ -53,7 +53,7 @@
                     <a class="nav-link" href="../Galleri/galleri.html">Galleri</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="bestilling.html">Bestill reise <span class="sr-only">(aktiv)</a>
+                    <a class="nav-link active" href="bestilling.html">Bestill reise <span class="sr-only">(aktiv)</span></a>
                 </li>
             </ul>
         </div>
@@ -65,7 +65,7 @@
         <div class="row">
             <div class="text-box">
                 <div class="text-box-content">
-                    <h4 id="cruiseDestination"></h4>
+                    <h4 id="cruiseDestination">Bestill din reise</h4>
                 </div>
             </div>
         </div>
@@ -74,8 +74,6 @@
 
     <div class="row">
         <form id="reiseform" class="skjema" action="http://www.iie.ntnu.no/fag/webutvikling1/prosjekt/behandle.php" method="post">
-
-        <h1>Bestill din reise</h1>
 
         *<b>Fornavn:</b>
         <br>
@@ -140,7 +138,7 @@
         <br>
 
         *<b>Destinasjon:</b>
-        <select id="cruisetype" name="Cruisetype" placeholder="Velg destinasjon">
+        <select id="cruisetype" name="Cruisetype">
           <option value="" disabled selected>Velg destinasjon</option>
           <option value="1">Lofoten</option>
           <option value="2">Henningsvær</option>
@@ -231,7 +229,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="../bilder/NewLogo2.png" class="footer-logo">
+                    <img alt="Logo" src="../bilder/NewLogo2.png" class="footer-logo">
                     <p>Norges Beste Cruise</p>
                 </div>
                 <div class="col-md-4">
