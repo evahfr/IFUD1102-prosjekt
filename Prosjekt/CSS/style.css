@@ -289,6 +289,7 @@ color: white;
 }
 
 .orderButton:hover {
+    background-color: #726c86;
     text-decoration: none;
     color: #FFFFFF;
 }

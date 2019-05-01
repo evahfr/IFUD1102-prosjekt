@@ -10,7 +10,7 @@ function DisableInvalidDates(date) {
         invalidDays = [0,5,6];
     } else if (cruiseType == "2") {
         // Henningsvær cruise går ikke på mandager til torsdager
-        invalidDays = [1,2,3,4,5];
+        invalidDays = [0,1,2,3,4];
     } else if (cruiseType == "3") {
         invalidDays = [];
     }
@@ -36,10 +36,10 @@ function setDateRange(date) {
         validDays = [1,2,3,4];
     } else if (cruiseType == "2") {
         // Gyldige dager for Henningsvær cruise
-        validDays = [0,6];
+        validDays = [5,6];
     } else if (cruiseType == "3") {
-        // Gyldige dager fir Bodø cruise
-        validDays = [0,1,2,3,4,5,6];
+        // Gyldige dager for Bodø cruise
+        validDays = [1,2,3,4,5,6,7];
     }
 
     var diffStart = date.getDate() - date.getDay() + (date.getDay() === 0 ? -6 : validDays[0]);
