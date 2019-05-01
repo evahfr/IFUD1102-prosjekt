@@ -167,7 +167,10 @@ transform: scale(1.1);
 }
 
 /*Gallery box 1*/
-
+.gallery-box1 {
+    position: relative;
+    margin-bottom: 30px;  
+}
 .gallery-box1 img {
     width: 96%;
     border-radius: 10px;
@@ -188,6 +191,7 @@ transform: scale(1.1);
     position: absolute;
     top: 30%;
     left: 20%;
+    margin-bottom: 5px;
  }
 /*Gallery Box 2*/
 
