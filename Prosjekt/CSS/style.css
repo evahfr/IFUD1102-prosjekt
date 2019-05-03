@@ -41,6 +41,13 @@ color: white;
     overflow: hidden;
 }
 
+#header-team {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/team.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
 #header-msLofoten {
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/skip/cruiseskip2.jpg);
     height: 600px;
