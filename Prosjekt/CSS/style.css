@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+.centered-title {
+    text-align: center;
+    margin: auto;
+}
 
 .header {
 height: 950px;
